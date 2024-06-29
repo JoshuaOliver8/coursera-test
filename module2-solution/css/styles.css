@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #d0e1e1;
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+}
+h1 {
+    color: #141f1f;
+    margin-bottom: 70px;
+    text-align: center;
+    font-size: 1.75em;
+} 
+section {
+    border: 1px solid black;
+    background-color: #5c8a8a;
+    margin: .5%;
+    color: white;
+    float: left;
+    padding: 3%;
+    position: relative;
+}
+.title {
+    padding: 2px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid black;
+    font-size: 1.25em;
+}
+.t1{
+    background-color: #334d4d;
+}
+.t2{
+    background-color: #058d8d;
+}
+.t3{
+    background-color: #4c6a8d;
+}
+.row {
+    width: 99%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+/* Desktop */
+@media (min-width: 992px) {
+    .col-lg-4 {
+        width: 32.33%;
+    }
+}
+  
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+    section {
+        padding: 5%;
+    }
+    .col-md-6 {
+        width: 49%;
+    }
+    .col-md-12 {
+        width: 99%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    html {
+        min-width: 300px;
+        overflow: auto;
+    }
+    .col-xs-12 {
+        width: 99%;
+        margin-bottom: 1%;
+        padding-top: 10%;
+    }
+}
+
+/* A little note about something I learned regarding media queries, particularly
+the max-width feature, on Windows 10. If your PC's display settings are set to have
+scaling at 125% or greater (which for me was the default setting), max-widths are
+NOT inclusive. For the longest time, the media queries would fail at 991px and 767px
+width, and I could not figure out why until I came across a random Stack Overflow
+comment on a post about this issue 
+(https://stackoverflow.com/questions/56842906/media-query-max-width-not-working-inclusively).
+Everything works once scaling is set to 100%. Gotta love quirky bugs, am I right?
+*/
